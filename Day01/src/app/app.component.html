@@ -1,0 +1,14 @@
+<h1>{{pageTitle}}</h1>
+<h2>{{(a+b)}}</h2>
+<h3>{{(a+b)+10}}</h3>
+
+<img [src]="imageUrl" alt="">
+<hr>
+<button (click)="toggleChange()" >Submit button {{disable}}</button>
+<hr>
+<button (click)="handleButtonClick()" >Click Me</button>
+<hr>
+<input [(ngModel)]="username" type="text">
+<p>{{username}}</p>
+<hr>
+<h1 [style.color]="isError?'red':'green'">Hello</h1>

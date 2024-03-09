@@ -1,3 +1,5 @@
+<h1>Create an AngularJS application that displays a list of items. Implement a custom directive called 'highlight' that changes the background color of each item in the list when hovered over. Additionally, use another directive named 'uppercase' to transform the text of each item to uppercase. Provide a sample list of items and demonstrate the usage of these directives in your application</h1>
+
 # Day01
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.

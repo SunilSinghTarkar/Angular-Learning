@@ -1,0 +1,18 @@
+<div>
+    <h2>Q1: Toggle Background Color Directive: Create an Angular directive named ToggleHighlightDirective. Implement a toggle functionality where clicking on an element alternates its background color between two predefined colors red and green. Use this directive in your main application component.</h2>
+    <h1 appToggleHighlightDirective >Click Me for Toggle Background Color</h1>
+</div>
+<hr>
+<div>
+    <h2 >Q2: Conditional Display Directive: Develop an Angular directive called ConditionalDisplayDirective. This directive should conditionally display or hide an element based on a boolean input value. Apply this directive to a button that, when clicked, toggles the visibility of a paragraph.</h2>
+
+    <p *ngIf="isParagraphVisible" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eius?</p>
+
+    <button appConditionalDisplayDirective (visibilityChange)="onVisibilityChange($event)"  >Click Me</button>
+</div>
+
+<hr>
+
+<app-products></app-products>
+
+<app-todo></app-todo>

@@ -1,0 +1,12 @@
+<h2>Q5: Create a product component (ProductComponent) that receives a list of products as an input. Each product in the list should have properties like name, price, and available. Implement dynamic styling for products based on the following criteria: Apply a different background color to products based on their availability. Use green for available products and red for unavailable products. Increase the font size of the product name for products with a price greater than a specified threshold. Display the list of products using the ngFor directive. Use either ngStyle or ngClass directive to apply the dynamic styles. Provide an input field for users to enter the price threshold for font size adjustment.</h2>
+
+<div class="products" >
+    <div class="product" *ngFor="let product of products" [ngStyle]="getStyle(product)">
+        <h1>{{product.name}}</h1>
+         <p>{{product.price}}</p>
+         <p *ngIf="product.available; else notAvailable" >Available</p>
+         <ng-template #notAvailable>
+            <p>Not Available</p>
+         </ng-template>
+    </div>
+</div>

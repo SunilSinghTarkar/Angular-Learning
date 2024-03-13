@@ -1,0 +1,34 @@
+<h2>Q3: Use the *ngIf directive to conditionally display a message indicating whether a product is available or not. If a product is available, show a green "Available" message; otherwise, display a red "Not Available" message.</h2>
+
+<div class="products" >
+    <div class="product" *ngFor="let product of products">
+        <h1>{{product.name}}</h1>
+         <p>{{product.price}}</p>
+         <p *ngIf="product.available; else notAvailable" style="color:green">Available</p>
+         <ng-template #notAvailable>
+            <p style="color: red;">Not Available</p>
+         </ng-template>
+    </div>
+</div>
+
+
+<hr>
+
+<h2>Q4: You are tasked with enhancing the product listing page in an Angular application by adding a search functionality. The goal is to allow users to search for products by their name.</h2>
+
+<input type="text" [(ngModel)]="searchText" >
+<button (click)="findProduct(searchText)">Search</button>
+
+<div *ngIf="searchData" class="product2">
+    <h1>{{searchData.name}}</h1>
+    <p>{{searchData.price}}</p>
+    <p *ngIf="searchData.available; else notAvailable" style="color:green">Available</p>
+    <ng-template #notAvailable>
+       <p style="color: red;">Not Available</p>
+    </ng-template>
+   
+</div>
+<footer></footer>
+<hr>
+<app-product-component [products]="products"></app-product-component>
+

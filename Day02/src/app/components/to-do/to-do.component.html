@@ -1,0 +1,19 @@
+<hr>
+<h2>Q6: You are building a to-do list component having todo items as array of object. Each todo item has a title, a
+    description, and a status (completed or not). Your task is to implement an Angular component to display the list of
+    todo items. Utilize the *ngFor directive to loop through the todo items and display their details. Additionally, use
+    the *ngIf directive to conditionally style the completed and incomplete todo items.</h2>
+
+<div>
+    <ol>
+        <li *ngFor="let todo of todos">
+            Task: {{todo.title}},
+            Description: {{todo.description}},
+            Status: <span style="color: green;" *ngIf="todo.completed"> {{todo.completed}}</span>
+            <span style="color: red;" *ngIf="!todo.completed"> {{todo.completed}}</span>
+
+        </li>
+
+    </ol>
+</div>
+<footer></footer>
